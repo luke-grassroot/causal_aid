@@ -1,0 +1,23 @@
+dag {
+"Govt-Quality" [latent,pos="-2.172,-1.405"]
+"WB-Loan-Rating" [exposure,pos="-2.167,1.592"]
+GlobalMacroDuringProject [adjusted,pos="-0.178,-1.401"]
+GlobalMacroPostProject [pos="1.157,-1.389"]
+GlobalMacroPriorProject [adjusted,pos="-0.807,-1.417"]
+GrowthDuringProject [adjusted,pos="-0.189,0.630"]
+GrowthPostProject [outcome,pos="1.165,1.613"]
+GrowthPriorProject [adjusted,pos="-0.815,0.089"]
+WBGovtRating [pos="-1.702,0.139"]
+"Govt-Quality" -> "WB-Loan-Rating"
+"Govt-Quality" -> GrowthPriorProject
+"Govt-Quality" -> WBGovtRating
+"WB-Loan-Rating" -> GrowthPostProject
+GlobalMacroDuringProject -> GlobalMacroPostProject
+GlobalMacroDuringProject -> GrowthDuringProject
+GlobalMacroPostProject -> GrowthPostProject
+GlobalMacroPriorProject -> GlobalMacroDuringProject
+GlobalMacroPriorProject -> GrowthPriorProject
+GrowthDuringProject -> GrowthPostProject
+GrowthPriorProject -> GrowthDuringProject
+WBGovtRating -> "WB-Loan-Rating"
+}
