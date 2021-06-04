@@ -1,0 +1,35 @@
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     education_lag_4_growth   R-squared:                       0.058
+Model:                                OLS   Adj. R-squared:                  0.051
+Method:                     Least Squares   F-statistic:                     7.585
+Date:                    Thu, 03 Jun 2021   Prob (F-statistic):           7.55e-11
+Time:                            21:24:22   Log-Likelihood:                 1141.2
+No. Observations:                    1115   AIC:                            -2262.
+Df Residuals:                        1105   BIC:                            -2212.
+Df Model:                               9                                         
+Covariance Type:                nonrobust                                         
+==========================================================================================
+                             coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+const                      1.0011      0.020     50.637      0.000       0.962       1.040
+project_completed_year     0.0015      0.006      0.239      0.811      -0.011       0.014
+pc_commit_education      9.42e-05      0.000      0.678      0.498      -0.000       0.000
+edu_pupil_teacher          0.0009      0.000      2.579      0.010       0.000       0.002
+young_population           0.0003      0.000      0.656      0.512      -0.001       0.001
+gdp_pc_ppp             -1.192e-06   6.54e-07     -1.823      0.069   -2.48e-06     9.1e-08
+cash_surplus_deficit       0.0013      0.001      2.238      0.025       0.000       0.002
+inflation              -8.203e-06   3.65e-06     -2.247      0.025   -1.54e-05   -1.04e-06
+trade_share_gdp        -2.543e-05   7.74e-05     -0.329      0.743      -0.000       0.000
+freedom_house              0.0022      0.002      1.229      0.219      -0.001       0.006
+==============================================================================
+Omnibus:                      748.727   Durbin-Watson:                   2.023
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            54308.451
+Skew:                           2.335   Prob(JB):                         0.00
+Kurtosis:                      36.870   Cond. No.                     7.71e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.71e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
