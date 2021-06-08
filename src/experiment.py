@@ -2,7 +2,7 @@ from IPython.display import Image, display
 
 from dowhy import CausalModel
 
-from futil import *
+from util.experiment import *
 
 sectoral_effect_graph_binary = """digraph { 
     "Govt-Quality"[latent];
