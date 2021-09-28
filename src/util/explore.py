@@ -8,6 +8,16 @@ from os.path import isfile
 def extract_indicators(wdi_df, indicator_codes):
   return wdi_df[wdi_df['Indicator Code'].isin(indicator_codes)]
 
+def lag_variable_simple(data, col, num_years):
+    data = data.sort_values(['country', 'year'])
+    data[f"{col}_lag{num_years}"] = data.groupby('country')[col].shift(num_years)
+    return data
+
+def rolling_country_agg(data, col, num_years, agg_function):
+    data = data.sort_values(['country', 'year'])
+    t_l = lambda x: x.rolling(num_years, 1).max() if agg_function == 'max' else x.rolling(num_years, 1).mean()
+    return data.groupby('country')[col].transform(t_l)
+
 def avg_indicator_prior(indicator_series, base_year, country_code, num_years=5, min_year=1960):
   series_country = indicator_series[(indicator_series['Country Code'] == country_code)]
   years_for_growth = [str(base_year - (i + 1)) for i in range(num_years)]
@@ -180,6 +190,7 @@ def is_project_complete_year(year, country, sp_df):
 def assemble_sector_proj_df(project_df, sector, consolidated_df=None, ppd_country_col='ppd_countrycode'):
   sp_df = project_df[project_df.sector == sector]
   start_years = sp_df.groupby('country_code')['start_year'].apply(set).to_dict()
+  
   if consolidated_df is not None:
     consolidated_df['project_start_year'] = consolidated_df.apply(
         lambda row: row[ppd_country_col] in start_years and row['year'] in start_years[row[ppd_country_col]], 

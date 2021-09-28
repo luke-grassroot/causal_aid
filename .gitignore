@@ -2,7 +2,12 @@
 *.xls*
 *.zip
 
+data/*
+
 __pycache__/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Pickles
+*.pkl
