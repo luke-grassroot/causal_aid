@@ -3,8 +3,8 @@
 Dep. Variable:     mortality_under5_pavg   R-squared (uncentered):                   1.000
 Model:                               OLS   Adj. R-squared (uncentered):              1.000
 Method:                    Least Squares   F-statistic:                          3.987e+04
-Date:                   Thu, 23 Sep 2021   Prob (F-statistic):                   4.14e-212
-Time:                           15:52:19   Log-Likelihood:                          315.89
+Date:                   Wed, 29 Sep 2021   Prob (F-statistic):                   4.14e-212
+Time:                           17:48:33   Log-Likelihood:                          315.89
 No. Observations:                    155   AIC:                                     -539.8
 Df Residuals:                        109   BIC:                                     -399.8
 Df Model:                             46                                                  

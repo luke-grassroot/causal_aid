@@ -3,8 +3,8 @@
 Dep. Variable:         edu_ner_pavg_5   R-squared:                       0.525
 Model:                            OLS   Adj. R-squared:                  0.482
 Method:                 Least Squares   F-statistic:                     12.05
-Date:                Thu, 23 Sep 2021   Prob (F-statistic):          5.09e-123
-Time:                        15:50:00   Log-Likelihood:                -1856.9
+Date:                Wed, 29 Sep 2021   Prob (F-statistic):          5.09e-123
+Time:                        17:45:33   Log-Likelihood:                -1856.9
 No. Observations:                1238   AIC:                             3924.
 Df Residuals:                    1133   BIC:                             4462.
 Df Model:                         104                                         
